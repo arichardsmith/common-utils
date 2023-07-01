@@ -1,0 +1,54 @@
+{
+  "name": "@arichardsmith/utils",
+  "version": "1.0.0",
+  "description": "A new package",
+  "keywords": [],
+  "author": {
+    "name": "Richard Smith"
+  },
+  "license": "ISC",
+  "type": "module",
+  "exports": {
+    "./array": {
+      "import": "./dist/array/index.js",
+      "types": "./dist/array/index.d.ts"
+    },
+    "./iterator": {
+      "import": "./dist/iterator/index.js",
+      "types": "./dist/iterator/index.d.ts"
+    },
+    "./object": {
+      "import": "./dist/object/index.js",
+      "types": "./dist/object/index.d.ts"
+    },
+    "./string": {
+      "import": "./dist/string/index.js",
+      "types": "./dist/string/index.d.ts"
+    },
+    "./url": {
+      "import": "./dist/url/index.js",
+      "types": "./dist/url/index.d.ts"
+    },
+    "./validation": {
+      "import": "./dist/validation/index.js",
+      "types": "./dist/validation/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "postinstall": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write src/",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "read-pkg": "^8.0.0",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.32.2",
+    "write-pkg": "^5.1.0"
+  }
+}
